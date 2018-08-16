@@ -1,1 +1,1 @@
-### <center> Learning Management System </center>
+<center> ### Learning Management System </center>
