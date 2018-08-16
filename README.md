@@ -2,5 +2,5 @@
 
 
 
-### [Learning Management System](https://github.com/westleya/westleya.github.io/tree/master/LMS/LMS/Controllers) (C#, SQL, JSON)
+### [Learning Management System](https://westleya.github.io/LMS.html) (C#, SQL, JSON)
 
