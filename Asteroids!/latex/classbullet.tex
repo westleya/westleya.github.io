@@ -1,0 +1,66 @@
+\hypertarget{classbullet}{}\section{bullet Class Reference}
+\label{classbullet}\index{bullet@{bullet}}
+
+
+{\ttfamily \#include $<$bullets.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbullet_afc9330ddfb10e98d59cfb1359e1ea9b0}\label{classbullet_afc9330ddfb10e98d59cfb1359e1ea9b0}} 
+{\bfseries bullet} (sf\+::\+Vector2f pos, int rot)
+\item 
+\mbox{\Hypertarget{classbullet_a9f4034426b156baab6eee5cedd8aa646}\label{classbullet_a9f4034426b156baab6eee5cedd8aa646}} 
+sf\+::\+Rectangle\+Shape {\bfseries get\+Rectangle} ()
+\item 
+\mbox{\Hypertarget{classbullet_aba070f87d94abc6997189d73bd3f9a6a}\label{classbullet_aba070f87d94abc6997189d73bd3f9a6a}} 
+void {\bfseries move} (int width, int height)
+\item 
+\mbox{\Hypertarget{classbullet_a7680994094c8622d4727bcb37fe9798f}\label{classbullet_a7680994094c8622d4727bcb37fe9798f}} 
+int {\bfseries get\+Distance} ()
+\item 
+\mbox{\Hypertarget{classbullet_a3b21fb28f76972bdac3e170018e55826}\label{classbullet_a3b21fb28f76972bdac3e170018e55826}} 
+sf\+::\+Vector2f \hyperlink{classbullet_a3b21fb28f76972bdac3e170018e55826}{get\+Position} () const
+\begin{DoxyCompactList}\small\item\em We destroy a bullet after it has traveled a certain distance. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classbullet_ac573dfc221d187bc8e49639bc57c1a96}\label{classbullet_ac573dfc221d187bc8e49639bc57c1a96}} 
+int {\bfseries get\+Rotation} () const
+\item 
+sf\+::\+Vector2f \hyperlink{classbullet_a6e9ed12be7f5732751881ee72bbd55e5}{get\+Size} () const
+\begin{DoxyCompactList}\small\item\em was facing when the bullet was shot. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classbullet_a10fe267aa30e980783ba78eb38d0953d}\label{classbullet_a10fe267aa30e980783ba78eb38d0953d}} 
+void {\bfseries draw\+Bullet} (sf\+::\+Render\+Window \&window)
+\item 
+\mbox{\Hypertarget{classbullet_a4f130f5e2af986b1b39bcc399883e392}\label{classbullet_a4f130f5e2af986b1b39bcc399883e392}} 
+void \hyperlink{classbullet_a4f130f5e2af986b1b39bcc399883e392}{update\+Position} (int width, int height)
+\begin{DoxyCompactList}\small\item\em Updates the position of a bullet for the current frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbullet_a07761d314074a90cca0d7fb16b6edc6e}\label{classbullet_a07761d314074a90cca0d7fb16b6edc6e}} 
+static void \hyperlink{classbullet_a07761d314074a90cca0d7fb16b6edc6e}{destroy\+Bullets} (std\+::vector$<$ \hyperlink{classbullet}{bullet} $>$ \&bullets)
+\begin{DoxyCompactList}\small\item\em Destroys bullet if it\textquotesingle{}s traveled its distance. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classbullet_a0b5d94105467e91f70ad5561e82b94cd}\label{classbullet_a0b5d94105467e91f70ad5561e82b94cd}} 
+static void \hyperlink{classbullet_a0b5d94105467e91f70ad5561e82b94cd}{make\+Bullets} (std\+::vector$<$ \hyperlink{classbullet}{bullet} $>$ \&bullets, const \hyperlink{classship}{ship} \&player\+Ship)
+\begin{DoxyCompactList}\small\item\em adds bullets to the vector of bullets \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Bullets are made when the user pushes space. Fire rate $\sim$ 5/sec. Their initialization is relative to the ship\textquotesingle{}s current position. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classbullet_a6e9ed12be7f5732751881ee72bbd55e5}\label{classbullet_a6e9ed12be7f5732751881ee72bbd55e5}} 
+\index{bullet@{bullet}!get\+Size@{get\+Size}}
+\index{get\+Size@{get\+Size}!bullet@{bullet}}
+\subsubsection{\texorpdfstring{get\+Size()}{getSize()}}
+{\footnotesize\ttfamily sf\+::\+Vector2f bullet\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+was facing when the bullet was shot. 
+
+Another get method replacement. The rotation is set to the direction the ship 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+bullets.\+hpp\item 
+bullets.\+cpp\end{DoxyCompactItemize}
