@@ -1,0 +1,93 @@
+\hypertarget{classship}{}\section{ship Class Reference}
+\label{classship}\index{ship@{ship}}
+
+
+{\ttfamily \#include $<$ship.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classship_ae4c561265a100a727a8d1cb3c38f56d8}\label{classship_ae4c561265a100a727a8d1cb3c38f56d8}} 
+{\bfseries ship} (int size, int x\+Pos, int y\+Pos)
+\item 
+\mbox{\Hypertarget{classship_af731a8fd841445b2da58bd1ccafc9f6d}\label{classship_af731a8fd841445b2da58bd1ccafc9f6d}} 
+void {\bfseries addlife} ()
+\item 
+\mbox{\Hypertarget{classship_a8d48d4b6187c48b31f6255458686051e}\label{classship_a8d48d4b6187c48b31f6255458686051e}} 
+int {\bfseries lives\+Left} ()
+\item 
+\mbox{\Hypertarget{classship_a7140791a9c86c42405bc2c65ef9dcf37}\label{classship_a7140791a9c86c42405bc2c65ef9dcf37}} 
+void {\bfseries rotate\+Right} ()
+\item 
+\mbox{\Hypertarget{classship_a86296d1b9ab64ab3821ca1e538de04f2}\label{classship_a86296d1b9ab64ab3821ca1e538de04f2}} 
+void {\bfseries rotate\+Left} ()
+\item 
+\mbox{\Hypertarget{classship_a285f7af23dd7b66301b865baab27fad9}\label{classship_a285f7af23dd7b66301b865baab27fad9}} 
+void {\bfseries thrusters} (int width, int height)
+\item 
+\mbox{\Hypertarget{classship_ae154788c5fa40e80ca0166cddce2ae31}\label{classship_ae154788c5fa40e80ca0166cddce2ae31}} 
+sf\+::\+Circle\+Shape {\bfseries get\+Ship} ()
+\item 
+\mbox{\Hypertarget{classship_a3ac26b45fd83a5546a25ea364458b93d}\label{classship_a3ac26b45fd83a5546a25ea364458b93d}} 
+sf\+::\+Vector2f {\bfseries get\+Position} () const
+\item 
+\mbox{\Hypertarget{classship_abb6032f9738208a343dcc3532153ddba}\label{classship_abb6032f9738208a343dcc3532153ddba}} 
+int \hyperlink{classship_abb6032f9738208a343dcc3532153ddba}{rotation\+Get} () const
+\begin{DoxyCompactList}\small\item\em We replaced certain sf\+::methods with our own. Get being the most common. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classship_a48a922eb97d7b0d92c2527c3236d0958}\label{classship_a48a922eb97d7b0d92c2527c3236d0958}} 
+void {\bfseries draw\+Ship} (sf\+::\+Render\+Window \&window)
+\item 
+\mbox{\Hypertarget{classship_a99ed337b2360f37a15ddefaac5a5d793}\label{classship_a99ed337b2360f37a15ddefaac5a5d793}} 
+void \hyperlink{classship_a99ed337b2360f37a15ddefaac5a5d793}{draw\+Lives} (sf\+::\+Render\+Window \&window)
+\begin{DoxyCompactList}\small\item\em We also made our own draw methods. \end{DoxyCompactList}\item 
+void \hyperlink{classship_ad46173638c8514f81e5b100cfa4186a8}{decriment\+Lives} (int width, int height)
+\begin{DoxyCompactList}\small\item\em top left corner of the screen \end{DoxyCompactList}\item 
+sf\+::\+Float\+Rect \hyperlink{classship_a12077a1e21b72f91054940da28fb5c90}{get\+Bounds} ()
+\begin{DoxyCompactList}\small\item\em It continues to run until it\textquotesingle{}s safe for the ship to reappear and until at least half a second has passed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classship_a3e7fa6b462de7ea41bd3dd2c96d2de56}{ship\+Reset} (sf\+::\+Clock \&clock, std\+::vector$<$ \hyperlink{classasteroid}{asteroid} $>$ \&asteroids, \hyperlink{classship}{ship} \&player\+Ship, int width, int height, sf\+::\+Render\+Window \&window)
+\begin{DoxyCompactList}\small\item\em reset the ship as part of the death process. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This describes the ship controlled by the player. It includes a slightly more complex version of the physics used by asteroids and bullets to move. While thrusters are on (UP arrow is pressed) the flame shows on the back of the ship. The player begins the game with three lives. Upon collision with an asteroid a life is lost and the ship is placed back in the center of the screen. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classship_ad46173638c8514f81e5b100cfa4186a8}\label{classship_ad46173638c8514f81e5b100cfa4186a8}} 
+\index{ship@{ship}!decriment\+Lives@{decriment\+Lives}}
+\index{decriment\+Lives@{decriment\+Lives}!ship@{ship}}
+\subsubsection{\texorpdfstring{decriment\+Lives()}{decrimentLives()}}
+{\footnotesize\ttfamily void ship\+::decriment\+Lives (\begin{DoxyParamCaption}\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})}
+
+
+
+top left corner of the screen 
+
+The number of lives you currently have displays in the \mbox{\Hypertarget{classship_a12077a1e21b72f91054940da28fb5c90}\label{classship_a12077a1e21b72f91054940da28fb5c90}} 
+\index{ship@{ship}!get\+Bounds@{get\+Bounds}}
+\index{get\+Bounds@{get\+Bounds}!ship@{ship}}
+\subsubsection{\texorpdfstring{get\+Bounds()}{getBounds()}}
+{\footnotesize\ttfamily sf\+::\+Float\+Rect ship\+::get\+Bounds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+It continues to run until it\textquotesingle{}s safe for the ship to reappear and until at least half a second has passed. 
+
+This returns the ship to the center of the screen after dying. \mbox{\Hypertarget{classship_a3e7fa6b462de7ea41bd3dd2c96d2de56}\label{classship_a3e7fa6b462de7ea41bd3dd2c96d2de56}} 
+\index{ship@{ship}!ship\+Reset@{ship\+Reset}}
+\index{ship\+Reset@{ship\+Reset}!ship@{ship}}
+\subsubsection{\texorpdfstring{ship\+Reset()}{shipReset()}}
+{\footnotesize\ttfamily void ship\+::ship\+Reset (\begin{DoxyParamCaption}\item[{sf\+::\+Clock \&}]{clock,  }\item[{std\+::vector$<$ \hyperlink{classasteroid}{asteroid} $>$ \&}]{asteroids,  }\item[{\hyperlink{classship}{ship} \&}]{player\+Ship,  }\item[{int}]{width,  }\item[{int}]{height,  }\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+reset the ship as part of the death process. 
+
+The width and height were necessary for us to be able to 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+ship.\+hpp\item 
+ship.\+cpp\end{DoxyCompactItemize}
