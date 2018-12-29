@@ -1,0 +1,22 @@
+Westley Kirkham
+Software Engineering
+May 1, 2018
+
+Testing my Discrete Event Driven Simulator
+
+1. Reducing the interval at which customers arrive from 32 seconds to something below 30, like 25 seconds, would decrease the percent time that tellers spent idle during the work day and increase the number of customers served, to a point.
+	In my testing the number of customers served goes down, but the percent idle drops as expected with my code. There's an upper limit to how many customers the tellers can serve. I know that, and I know that increasing the interval at which customers arrive shouldn't change that limit, it should just change the percent of customers that get served, which we're not reporting on.
+
+2. If I double the number of tellers, leaving everything else the same, (interval customers arrive at, etc.) then the percent of the day that there's an idle teller should increase to 100%.
+	It does.
+
+3. If I increase the RUNTIME of my simulator the number of customers served should increase. 
+	It does.
+
+4. If the number of tellers is 0 then no customers should be served, there should be no idle time. And, since I only calculate wait time for customers that were served the average should be 0.
+	I got as expected. 
+
+5. Increasing the interval of arrival to something above 32, like 40, should increase the percent idle time and the number of customers served.
+	For a typical run (arrival_interval = 32) the percent idle time ~=57. For an arrival interval of 40 it's 86.4%. I seem to be incapable of predicting how the number of customers served will change because they increase for the 40 second interval to 2,325,581 from 2,161,059 for the 32 second interval. 
+	I presume that, with idle time the way it's reported, any time below 100% means there's going to be a period during which incoming customers aren't/can't be served and that will reduce the number of customers you can help in a day. So, having a higher percent idle time isn't bad.
+
