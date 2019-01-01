@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:/Users/westleykirkham/BoxSync/School/westleya/DataAnalytics/Homework4/Homework4/BucketKNN.hpp">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/westleykirkham/BoxSync/School/westleya/DataAnalytics/Homework4/Homework4/Generators.hpp">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/westleykirkham/BoxSync/School/westleya/DataAnalytics/Homework4/Homework4/KDTree.hpp">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/westleykirkham/BoxSync/School/westleya/DataAnalytics/Homework4/Homework4/Point.hpp">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/westleykirkham/BoxSync/School/westleya/DataAnalytics/Homework4/Homework4/Stopwatch.hpp">
+   </FileRef>
+   <FileRef
+      location = "self:">
+   </FileRef>
+</Workspace>

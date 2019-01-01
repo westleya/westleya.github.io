@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:background="@color/ApplePink"
+        android:elevation="4dp">
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/logo_331"
+            android:id="@+id/iv_toolbar_logo"
+            android:onClick="returnToHome" />
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/profile_placeholder"
+                android:id="@+id/iv_toolbar_profile_pic"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="8dp"
+                android:onClick="goToUserProfile"/>
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@id/toolbar"
+        android:id="@+id/fl_frag_masterlist_container_phone">
+
+        <!--
+
+            put your activity content here
+            You can change the layout to anything you want
+            right now it is a linear layout
+
+        -->
+
+
+    </LinearLayout>
+
+</RelativeLayout>
