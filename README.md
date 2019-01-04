@@ -16,10 +16,10 @@
 
 ### [Spatial Partitioning Data Structures ](https://westleya.github.io/Spatial.html) (C++, Python)
 
-### [Character Recognition ](https://westleya.github.io/Character.html) (Python, Keras)
+### [Character Recognition ](https://westleya.github.io/Character.html) (Python)
 
-### [Learning Management System ](https://westleya.github.io/LMS.html) (C#, SQL, JSON)
+### [Learning Management System ](https://westleya.github.io/LMS.html) (C#, SQL)
 
 ### [Lifestyle App ](https://westleya.github.io/Lifestyle.html) (Android)
 
-### [Personal PM2.5 Exposure App ](https://westleya.github.io/Exposure.html) (JS, React Native, Expo)
+### [Personal PM2.5 Exposure App ](https://westleya.github.io/Exposure.html) (React Native)
