@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang = 'en'>
+<head>
+		<meta charset = "utf-8"/>
+		<title> List of Avatars </title>
+</head>
+
+<body>
+        <table>
+        <thead>
+            <tr>
+                <td>Name</td>
+                <td>Hobby</td>
+                <td>Picture</td>
+            </tr>
+        </thead>
+        <tbody>
+        <?php
+            $connect = mysql_connect("localhost","root", "root");
+            if (!$connect) {
+                die(mysql_error());
+            }
+            mysql_select_db("Avatar_List");
+            $results = mysql_query("SELECT name, hobby, avatar FROM AvatarList");
+            while($row = mysql_fetch_array($results)) {
+            ?>
+                <tr>
+                    <td><?php echo $row['Name']?></td>
+                    <td><?php echo $row['Hobby']?></td>
+                    <td><?php echo $row['Picture']?></td>
+                </tr>
+
+            <?php
+            }
+            ?>
+            </tbody>
+            </table>
+    </body>
+</html>
