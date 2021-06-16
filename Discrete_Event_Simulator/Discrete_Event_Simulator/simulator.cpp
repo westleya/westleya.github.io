@@ -77,7 +77,7 @@ void runBank(std::vector<Customer> customers, std::vector<Teller> tellers) {
         Event curr_event = queue.top();
         
         if (curr_event.type == arrival) {
-            int soonest = 600;
+            int soonest = 600; // The soonest time a customer can see the next teller, updated below. Default is longest possible time_to_handle
             // Check for a free teller when a customer arrives.
             for(int i = 0; i < NUM_TELLERS; i++) {
                 if(!tellers[i].occupied) {
@@ -196,7 +196,7 @@ void runBank(std::vector<Customer> customers, std::vector<Teller> tellers) {
     
 }
 
-//Services customers using ten lines with one teller operating each line.
+//Services customers using n lines with one teller operating each line.
 void runSuperMarket(std::vector<Customer> customers, std::vector<Teller> tellers) {
     
     int current_time = 0;
@@ -243,9 +243,10 @@ void runSuperMarket(std::vector<Customer> customers, std::vector<Teller> tellers
                 soonest = (tellers[i].finish_time - current_time) < soonest ? (tellers[i].finish_time - current_time): soonest;
             }
             // If all the tellers are occupied the customer will have to be added to a line and wait until
-            // they can be served, the soonest being when the next teller finishes.
+            // they can be served, the soonest being when the next teller finishes. They would choose the
+            // teller with the shortest line and the soonest to finish (if they can tell)
             if (!curr_event.customer.served) {
-                int line = 0;
+                int line = 0; // Line and corresponding the customer will choose (shortest)
                 for (int i = 1; i < NUM_TELLERS; i++) {
                     if (lines[i].size() < lines[line].size()) {
                         line = i;
@@ -263,6 +264,7 @@ void runSuperMarket(std::vector<Customer> customers, std::vector<Teller> tellers
             int soonest = 600;
             Customer customer = lines[curr_event.num_teller].front();
             // Check for a free teller once the expected wait time expires.
+            // Theoretically, the only teller that will be free, if a customer got into the shortest line, is the one they entered.
             for(int i = 0; i < NUM_TELLERS; i++) {
                 if(!tellers[i].occupied) {
                     
